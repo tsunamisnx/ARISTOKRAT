@@ -28,3 +28,29 @@
 .hookah-copy{padding-top:10px}.hookah-copy h2{font-size:clamp(38px,4vw,60px)}.hookah-lead{font-size:14px;line-height:1.85;margin-top:22px;max-width:460px}.hookah-prices{margin:28px 0 14px}.hookah-prices>div{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding:14px 0}.hookah-prices dt{font-size:14px}.hookah-prices dd{margin:0;white-space:nowrap;font-size:21px;font-family:var(--serif);font-weight:600;color:var(--wine)}.hookah-price-note{font-size:10px;max-width:400px}.hookah-actions{display:flex;align-items:center;flex-wrap:wrap;gap:23px;margin-top:24px}.hookah-hours{font-size:11px;margin-top:18px}.hookah-more{margin-top:40px}.hookah-more>.accordion>summary{font-size:18px}.hookah-more .legacy{max-width:900px;padding-top:10px}.hookah-videos{margin-top:45px}.hookah-videos h2{font-size:36px;margin-bottom:24px}.hookah-videos>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.hookah-videos a{border-top:1px solid var(--line);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:12px}.hookah-videos a svg{flex-shrink:0;color:var(--wine)}
 @media(max-width:900px){.hookah-layout{gap:5%}.hookah-photo>a{height:450px}.hookah-actions{gap:18px}.hookah-thumbnails{gap:3px}.hookah-thumbnails img{height:42px}}
 @media(max-width:600px){.hookah-page{padding-top:30px}.hookah-layout{grid-template-columns:minmax(0,1fr);gap:28px}.hookah-copy{order:-1;padding:0}.hookah-copy h2{font-size:38px}.hookah-lead{font-size:13px;margin-top:16px}.hookah-prices{margin-top:18px}.hookah-prices>div{padding:10px 0}.hookah-prices dt{font-size:13px}.hookah-actions{margin-top:20px}.hookah-photo>a{height:370px}.hookah-thumbnails img{height:43px}.hookah-videos>div{grid-template-columns:1fr;gap:0}.hookah-more{margin-top:25px}.hookah-more>.accordion>summary{font-size:16px}.hookah-videos{margin-top:30px}}
+
+/* Offer cards keep cover photos separate from action icons and pagination. */
+.offers-page .row:has(>.col-lg-6.d-grid){grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;align-items:stretch}
+.offers-page .col-lg-6.d-grid{display:flex;min-width:0}
+.offers-page .blog-item-two{display:flex;flex-direction:column;width:100%;min-width:0;border:1px solid var(--line);background:#fbf8f2}
+.offers-page .post-thumbnail{position:relative;overflow:hidden;background:#eee8dd}
+.offers-page .post-a{display:block}
+.offers-page .post-thumbnail .post-a>img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;transition:transform .4s}
+.offers-page .post-a:hover>img{transform:scale(1.03)}
+.offers-page .post-thumbnail .post-subtitle{position:absolute;top:16px;left:16px;z-index:1;margin:0;padding:5px 11px;border-radius:20px;background:var(--cream);color:var(--wine);font-size:9px;line-height:1.6;letter-spacing:.08em;text-transform:uppercase}
+.offers-page .blog-date{position:absolute;bottom:12px;left:16px;padding:4px 10px;background:var(--cream);font-size:10px;color:var(--wine)}
+.offers-page .entry-content{display:flex;flex-direction:column;flex:1;padding:22px}
+.offers-page .entry-content h3{font-size:28px;line-height:1.14;letter-spacing:-.4px;margin:0 0 24px}
+.offers-page .post-info{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:auto}
+.offers-page .post-info .main-btn{margin:0;padding:9px 0 6px;font-size:12px;line-height:1.5;width:fit-content}
+.offers-page .post-info .main-btn:after{content:'↗';margin-left:10px}
+.offers-page .post-info .btn-warning{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border-radius:24px;background:var(--wine);color:var(--cream);font-size:11px;line-height:1.5;min-height:40px}
+.offers-page .post-info .btn-warning:hover{background:#472129;color:var(--cream)}
+.offers-page .post-info .btn-warning img{display:inline-block;flex:0 0 17px;width:17px;height:17px;max-width:17px;aspect-ratio:auto;object-fit:contain;filter:invert(1)}
+.offers-page .entry-content>p:empty,.offers-page .post-info:empty,.offers-page .blog-date:empty{display:none}
+.offers-page .paggi{grid-column:1/-1;border-top:1px solid var(--line);margin-top:8px;padding-top:28px}
+.offers-page .pagination{justify-content:center;gap:8px;margin:0;align-items:center}
+.offers-page .pagination .page-link{min-width:40px;min-height:40px;text-align:center;font-size:11px;padding:9px 12px}
+.offers-page .pagination .disabled{opacity:.45}
+@media(max-width:1000px){.offers-page .row:has(>.col-lg-6.d-grid){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.offers-page .row:has(>.col-lg-6.d-grid){grid-template-columns:minmax(0,1fr);gap:24px}.offers-page .entry-content{padding:20px}.offers-page .entry-content h3{font-size:28px;margin-bottom:20px}.offers-page .pagination{gap:6px;flex-wrap:wrap}.offers-page .pagination .page-link{padding:9px 10px}.offers-page .paggi{padding-top:24px;margin-top:0}}
